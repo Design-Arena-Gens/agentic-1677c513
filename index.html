@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chief — Futuristic Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="background-canvas" aria-hidden="true"></canvas>
+    <main class="hero">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 80 80" role="presentation">
+          <circle cx="40" cy="40" r="24" />
+          <path
+            d="M40 12 L48 28 L64 28 L52 40 L60 64 L40 50 L20 64 L28 40 L16 28 L32 28 Z"
+            fill="none"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="identity">
+        <h1>chief</h1>
+        <p class="tagline">cybernetic design architect</p>
+      </div>
+      <nav class="social-links" aria-label="Social profiles">
+        <a
+          class="social-link"
+          href="https://steamcommunity.com/id/your-profile"
+          target="_blank"
+          rel="noopener"
+          aria-label="Steam"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21.6 0H2.4A2.4 2.4 0 0 0 0 2.4v8.61l6.31 2.62a3.78 3.78 0 0 1 7.3.83l4.57 1.9h3.42A2.4 2.4 0 0 0 24 14.96V2.4A2.4 2.4 0 0 0 21.6 0ZM8.23 17.6a2.55 2.55 0 0 1-2.36-1.53l-4.02-1.67v6.1A2.4 2.4 0 0 0 4.24 24h17.37a2.4 2.4 0 0 0 2.39-2.4v-3.07h-5.9a3.8 3.8 0 0 1-7.42-.93L8.73 16a2.55 2.55 0 0 1-.5 1.6ZM9.5 15.4a1.28 1.28 0 1 1-2.56 0 1.28 1.28 0 0 1 2.56 0Zm6.85-2.9a2.57 2.57 0 1 1 0-5.13 2.57 2.57 0 0 1 0 5.14Zm0-3.85a1.28 1.28 0 1 0 0 2.57 1.28 1.28 0 0 0 0-2.57Z"
+            />
+          </svg>
+        </a>
+        <a
+          class="social-link"
+          href="https://open.spotify.com/user/your-profile"
+          target="_blank"
+          rel="noopener"
+          aria-label="Spotify"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0Zm5.22 17.33a.78.78 0 0 1-1.07.26 10.55 10.55 0 0 0-9.33-.68.78.78 0 0 1-.62-1.43 12.11 12.11 0 0 1 10.71.78.78.78 0 0 1 .31 1.07Zm1.48-3.27a.96.96 0 0 1-1.32.32 13.53 13.53 0 0 0-11.81-.84.96.96 0 0 1-.7-1.8 15.1 15.1 0 0 1 13.22.93.96.96 0 0 1 .61.81.94.94 0 0 1-.31.58Zm.1-3.4a1.12 1.12 0 0 1-1.53.38 16.53 16.53 0 0 0-14.42-.92 1.12 1.12 0 0 1-.74-2.12A18.19 18.19 0 0 1 17.52 8a1.12 1.12 0 0 1 .76 2.07Z"
+            />
+          </svg>
+        </a>
+        <a
+          class="social-link"
+          href="https://discordapp.com/users/your-id"
+          target="_blank"
+          rel="noopener"
+          aria-label="Discord profile"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20.32 4.36A16.68 16.68 0 0 0 16.46 3l-.18.33a15.74 15.74 0 0 1 3.39 1.65 15.13 15.13 0 0 0-9-1 15.1 15.1 0 0 0-2.94-1l-.18-.33a16.68 16.68 0 0 0-3.86 1.36C.38 9.93-.22 15.36.07 20.71a16.88 16.88 0 0 0 4.93 2.51 12.38 12.38 0 0 0 1.1-1.76 10.86 10.86 0 0 1-1.73-.84l.41-.32a11.75 11.75 0 0 0 11.54 0l.41.33a11.12 11.12 0 0 1-1.8.88 12.05 12.05 0 0 0 1 1.62 16.88 16.88 0 0 0 4.93-2.51c.27-5.03-.36-10.46-2.54-16.35ZM8.78 16.24a1.65 1.65 0 0 1-1.56-1.74 1.65 1.65 0 0 1 1.56-1.74 1.66 1.66 0 0 1 1.58 1.74 1.66 1.66 0 0 1-1.58 1.74Zm6.44 0a1.65 1.65 0 0 1-1.56-1.74 1.65 1.65 0 0 1 1.56-1.74 1.66 1.66 0 0 1 1.58 1.74 1.66 1.66 0 0 1-1.58 1.74Z"
+            />
+          </svg>
+        </a>
+        <a
+          class="social-link"
+          href="https://discord.gg/your-server"
+          target="_blank"
+          rel="noopener"
+          aria-label="Discord server"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M21.92 4.1a16.22 16.22 0 0 0-4.64-1.64l-.22.42a15.31 15.31 0 0 1 3.32 1.44A14.86 14.86 0 0 0 12 3.16 14.86 14.86 0 0 0 3.62 4.32a15.31 15.31 0 0 1 3.32-1.44l-.22-.42A16.22 16.22 0 0 0 2.08 4.1C-.47 9.92-.91 15.56.27 21a16.27 16.27 0 0 0 5.16 2.76 12.59 12.59 0 0 0 1.15-1.84 11 11 0 0 1-1.93-.93l.46-.36a12.14 12.14 0 0 0 13.78 0l.46.36a10.76 10.76 0 0 1-2 .95 12.35 12.35 0 0 0 1.06 1.74A16.27 16.27 0 0 0 23.73 21c1.22-5.44.75-11.08-1.81-16.9ZM8.93 15.84a1.75 1.75 0 0 1-1.63-1.82 1.75 1.75 0 0 1 1.63-1.82 1.76 1.76 0 0 1 1.65 1.82 1.76 1.76 0 0 1-1.65 1.82Zm6.14 0a1.75 1.75 0 0 1-1.63-1.82 1.75 1.75 0 0 1 1.63-1.82 1.76 1.76 0 0 1 1.65 1.82 1.76 1.76 0 0 1-1.65 1.82Z"
+            />
+          </svg>
+        </a>
+      </nav>
+    </main>
+
+    <div class="audio-control">
+      <button class="mute-toggle" type="button" aria-label="Toggle sound">
+        <span class="mute-icon" aria-hidden="true"></span>
+      </button>
+      <input
+        class="volume-slider"
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.4"
+        aria-label="Background volume"
+      />
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
